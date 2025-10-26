@@ -1,6 +1,10 @@
 name: Hello Agile
 
-on: [push]
+on:
+  push:
+    branches: [ dev ]      # Trigger when code is pushed to dev
+  pull_request:
+    branches: [ main ]     # Trigger when a PR targets main
 
 jobs:
   say_hello:
